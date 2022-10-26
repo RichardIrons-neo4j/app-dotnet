@@ -72,8 +72,7 @@ namespace Neoflix.Services
                     RETURN m {
                         .*,
                         rating: r.rating
-                    } as movie", new {userId,
-                    tmdbId, rating});
+                    } as movie", new {userId, tmdbId, rating});
 
                 if (!await cursor.FetchAsync())
                     return null;
